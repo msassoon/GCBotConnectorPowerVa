@@ -1,11 +1,4 @@
 ---
-[comment]: # Title format: imperative verb + noun in sentence case. Example follows.
-
-[comment]: # Categories: 0: Introduction to Genesys Cloud Development; 1: Identity and Access Management; 2: Organization and People; 3: Telephony Configuration and Integration; 4: Flows, Schedules and Routing; 5: Contact Center Configuration; 6 Infrastructure and Integration; 7: Communications Channels; 8: Account Settings; 9: Notification and Communication; 10: Documents; 11: Data Reporting and Quality; 12: Workforce Management. Example follows.
-
-[comment]: # Summary: copy the introductory text. Example follows.
-
-[comment]: # Image: location of the image. Example follows.
 
 title: Use Web Messaging with Genesys Bot Connector and Microsoft Power VA (Virtual Assistant)
 author: Marc Sassoon and Pierrick Lozach
@@ -17,21 +10,9 @@ summary: |
   This blueprint will help you use the Genesys Bot Connector to connect to a Microsoft Power Virtual Agent to answer customer queries via Web Messaging. It also provides a guide to do this for any other bot technology that Genesys does not support as a strategic vendor.
 ---
 
-{introductory text}
-
-[comment]: # Introductory text: 2-3 sentences. What solution does, how it does it, why use this solution. Example text follows.
-
 This Genesys Cloud Developer Blueprint provides instructions for deploying a Microsoft Power VA bot in Genesys Cloud. The Genesys Bot Connector is used here to provide an API for the bot to connect to, but a direct link between Genesys Cloud and the bot is not possible. For this scenario to work, an application (known as the Bot Interpreter and represented by the Lambda function in the diagram) needs to be in between Genesys Cloud and Power VA. This application takes the message from the customer using Messenger (known as the utterance) from Genesys Bot Connector and changes the format before sending out a HTTP request to Power VA for NLU. The return message is also converted by the Bot Interpreter to match the postUtterance API provided by Genesys Bot Connector.
 
-{diagram}
-
-[comment]: # Diagram should show high-level, end-to-end solution. Format and example follows.
-
 ![Flowchart for the bot connector solution](images/flowchart_bot_connector.png "Flowchart for the bot connector solution")
-
-{TOC}
-
-[comment]: # List links to all H2 sections in blueprint. Example follows.
 
 * [Solution components](#solution_components "Goes to the Solutions components section")
 * [Prerequisites](#prerequisites "Goes to the Prerequisites section")
@@ -248,35 +229,6 @@ Content-Type: application/json
 
 	![Messenger](images/Messenger.png "Messenger")
 	
-[comments]: # Use the correct label and formatting for notes, tips, important items, and warnings. Format and examples follow.
-
-:::primary
-**Note**: I am a note! It's a good idea to read me.
-:::
-:::primary
-**Note**: If **Setting Type** is grayed out, then enable **Manage List Custom Settings Type**.
-:::
-
-:::primary
-**Tip**: Hey, I suggest alternatives that you might not be aware of.
-:::
-:::primary
-**Tip**: To ensure that the integration finds phone numbers, confirm that all of your phone numbers in your third-party system are in digit-only format (for example, 13175550125).
-:::
-
-:::primary
-**Important**: I am an important note. If you ignore me, things may not work as expected but you won't suffer data loss.
-:::
-:::primary
-**Important**: Due to Salesforce and Genesys Cloud limits, we recommend only syncing 1,000 campaign members in total for each sync job. Higher numbers might work but not in all cases.
-:::
-
-:::warning
-**Warning**: I am a warning. If you do not pay attention to me, something catastrophic will happen, like the loss of data.
-:::
-:::warning
-**Warning**: Transcripts greater than 131,072 characters fail to save.
-:::
 
 ## Additional resources
 
