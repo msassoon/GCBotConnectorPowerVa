@@ -180,7 +180,7 @@ Content-Type: application/json
             {
               "name": "Check Stock",
               "slots": {
-                "Slot1 ": {
+                "Slot1": {
                   "name": "Slot1",
                   "type": "String"
                 }
